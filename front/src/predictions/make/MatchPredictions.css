@@ -1,0 +1,27 @@
+.matches-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.no-matches-found {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.match-unfinished {
+    background: red;
+}
+
+.match-finished {
+    background: blue;
+}
+
+.margin-table {
+    margin-bottom: 60px;
+}
+
+.load-more-matches {
+    text-align: center;
+}
