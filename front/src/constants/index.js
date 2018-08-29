@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'http://localhost:8080';
+export const API_BASE_URL = 'https://ztihazard.eu-gb.mybluemix.net';
 export const SERVICE_TOKEN = 'WlRJOlpUSQ==';
 export const ACCESS_TOKEN = 'access_token';
 
