@@ -1,0 +1,25 @@
+.new-league-container {
+    max-width: 520px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.new-league-form-button {
+    width: 100%;
+}
+
+.new-league-form-button[disabled], .new-league-form-button[disabled]:hover, .new-league-form-button[disabled]:focus {
+    opacity: 0.6;
+    color: #fff;
+    background-color: #1890ff;
+    border-color: #1890ff;
+}
+
+
+.league-form-row {
+    margin-bottom: 20px;
+}
+
+.league-form-row input, .league-form-row textarea {
+    margin-bottom: 4px;
+}

@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: 'jdbc:db2://dashdb-txn-sbox-yp-lon02-01.services.eu-gb.bluemix.net:50000/BLUDB'
+    username: 'rgq49813'
+    password: 'qjs15@5550qcm201'
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
+    tomcat:
+      max-active: 2
+  jpa:
+    database-platform: org.hibernate.dialect.DB2Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+
+security:
+  user:
+    password: admin1
