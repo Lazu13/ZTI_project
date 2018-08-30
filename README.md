@@ -40,6 +40,6 @@ Aplikacja klienta została zdeployowana w chmurze Heroku przy pomocy ``create-re
 
 
  ## Dodatkowe informacje
- W katalogu doc/uml znajdują się szczegółowe diagramy klas częsci klienta i serwerowej.
- W katalogu doc/javadoc znajduje się dokumentacja kodu częsci serwerowej.
- W pliku doc/doc.pdf znajduje się dokumentacja projektu
+ W katalogu doc/uml znajdują się szczegółowe diagramy klas częsci klienta i serwerowej.  
+ W katalogu doc/javadoc znajduje się dokumentacja kodu częsci serwerowej.  
+ W pliku doc/doc.pdf znajduje się dokumentacja projektu.  
