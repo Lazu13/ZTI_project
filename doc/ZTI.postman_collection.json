@@ -1,0 +1,1020 @@
+{
+	"info": {
+		"_postman_id": "d84a9783-a9c5-4a67-8862-4523b9259da5",
+		"name": "ZTI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "dodawanie uzytkownika",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic WlRJ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"Test\",\n  \"password\": \"pass\",\n  \"email\": \"mail@mail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuwanie uzytkownika",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjgwNTMyNDAsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOGJjMjAzNjItNTEwYS00MWY2LWJkOWUtMzk1NzYyNzcwYmFkIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.LrUiXTqEmZQBqW78OirTUmo2HsQpWw_4lPBJAIPxnqw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobranie regex username",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/like/m?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"like",
+								"m"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobranie siebie",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login/logout",
+			"item": [
+				{
+					"name": "logowanie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic WlRJOlpUSQ=="
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "mb",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/oauth/token",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wylogowanie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzIyMTcsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjhkNjAzOGQtNzFlNy00Yzc4LThhMWUtNWE5ZTk3ZWJlMzEwIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.UUxK_yDhA8ughvflK4_a5riVKopIz5RKjutIN6nJbQU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/oauth/revoke-token",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"revoke-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "league",
+			"item": [
+				{
+					"name": "pobranie grupy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/leagues?page=0&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobranie wszystkich grup",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQ0NDA3MjUsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjY3YzNjYmItMWEzMi00MzQ3LWExMDgtM2M5ZjE1ZTE0ZGQ3IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.nXTDPPSptnXP6T-g1Y8WxXBb2sf-KoHegcAHVd2cn2M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/leagues/all?page=0&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stwórz grupe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzQ4NDgsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTZmMjQ2N2EtZjJmMy00NjZiLTkwMWYtYThlMTA4NzJkOGZmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.6CvyX1_OIlNFSIRkfO-MxkgkjWb_3Mn7FhNguU4ruHc",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjgwNDkzNjAsInVzZXJfbmFtZSI6ImxhenUiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6IjAzMGY1Mjk3LTdmOTQtNDY5Yy1iNzVmLTgzZDEyNzhmMDBiNiIsImNsaWVudF9pZCI6IlpUSSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.2sYCmxVqShr8W6JVvyBlHDqv5H1Oq3bYaKYQp2Ycv5s"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"liga1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/leagues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuń grupę",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzQ4NDgsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTZmMjQ2N2EtZjJmMy00NjZiLTkwMWYtYThlMTA4NzJkOGZmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.6CvyX1_OIlNFSIRkfO-MxkgkjWb_3Mn7FhNguU4ruHc",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5Nzk1NzQsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTVhYmZiMjYtM2ViYi00NDEzLThjOWMtOTE5ODFjMTJlYjFmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.T5xuUT-8O1ZIv0K6bX6UPQKMqY-FDLI4WM9lZ5D4dpw"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/leagues/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobranie zaproszeń",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQ0NDA3MjUsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjY3YzNjYmItMWEzMi00MzQ3LWExMDgtM2M5ZjE1ZTE0ZGQ3IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.nXTDPPSptnXP6T-g1Y8WxXBb2sf-KoHegcAHVd2cn2M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/leagues/invitations?page=0&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"invitations"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zaproś użytkownika",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzQ4NDgsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTZmMjQ2N2EtZjJmMy00NjZiLTkwMWYtYThlMTA4NzJkOGZmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.6CvyX1_OIlNFSIRkfO-MxkgkjWb_3Mn7FhNguU4ruHc",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjgwNDkzNjAsInVzZXJfbmFtZSI6ImxhenUiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6IjAzMGY1Mjk3LTdmOTQtNDY5Yy1iNzVmLTgzZDEyNzhmMDBiNiIsImNsaWVudF9pZCI6IlpUSSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.2sYCmxVqShr8W6JVvyBlHDqv5H1Oq3bYaKYQp2Ycv5s"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/leagues/2/users/1/invitation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"2",
+								"users",
+								"1",
+								"invitation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "odrzuć zaproszenie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzQ4NDgsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTZmMjQ2N2EtZjJmMy00NjZiLTkwMWYtYThlMTA4NzJkOGZmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.6CvyX1_OIlNFSIRkfO-MxkgkjWb_3Mn7FhNguU4ruHc",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5ODI1NDMsInVzZXJfbmFtZSI6ImxhenUiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6IjdmYTA2OTFmLWFhNmEtNGVkMC1iYTUzLTI1ZDUxZmVmNjQ0MiIsImNsaWVudF9pZCI6IlpUSSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.2IuQgNEB7iB0ef36-ud1TvrDok9QeujeRYkf90FZAHI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/leagues/2/invitation/reject",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"2",
+								"invitation",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "akceptuj zaproszenie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzQ4NDgsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTZmMjQ2N2EtZjJmMy00NjZiLTkwMWYtYThlMTA4NzJkOGZmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.6CvyX1_OIlNFSIRkfO-MxkgkjWb_3Mn7FhNguU4ruHc",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjgwNDk0NTIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiZWIxYjQ1MWQtYWI2Yi00NGY3LWFhN2UtZThhZTQxOWQ3YTQ4IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.h8ac6SmiCZBJIZMUFBkFEGaUaEHKSymmpJi_biMEKw0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/leagues/2/invitation/accept",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"2",
+								"invitation",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "odejdź z grupy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mjc5NzQ4NDgsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNTZmMjQ2N2EtZjJmMy00NjZiLTkwMWYtYThlMTA4NzJkOGZmIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.6CvyX1_OIlNFSIRkfO-MxkgkjWb_3Mn7FhNguU4ruHc",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjgwNDkzNjAsInVzZXJfbmFtZSI6ImxhenUiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6IjAzMGY1Mjk3LTdmOTQtNDY5Yy1iNzVmLTgzZDEyNzhmMDBiNiIsImNsaWVudF9pZCI6IlpUSSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.2sYCmxVqShr8W6JVvyBlHDqv5H1Oq3bYaKYQp2Ycv5s"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/leagues/1/leave",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"leagues",
+								"1",
+								"leave"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "match",
+			"item": [
+				{
+					"name": "pozyskaj mecze fazy pucharowej",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Og==",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/matches/all/knockout?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matches",
+								"all",
+								"knockout"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pozyskaj mecze fazy grupowej",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQ1MzY5MTksInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiODE3MDI1ZTUtMTMwNC00NjZmLWE5M2EtMjVkMTg0ODM0ZmRlIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.NYBJHUAR91OY9PQ91cEan9E41IWb_GgxgWLhJrBhEME",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/matches/all/group?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matches",
+								"all",
+								"group"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pozyskaj kolejny mecz",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQ1MzY5MTksInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiODE3MDI1ZTUtMTMwNC00NjZmLWE5M2EtMjVkMTg0ODM0ZmRlIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.NYBJHUAR91OY9PQ91cEan9E41IWb_GgxgWLhJrBhEME",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/next_match",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"next_match"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "prediction",
+			"item": [
+				{
+					"name": "pobierz predykcje",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQ0NDA3MjUsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjY3YzNjYmItMWEzMi00MzQ3LWExMDgtM2M5ZjE1ZTE0ZGQ3IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.nXTDPPSptnXP6T-g1Y8WxXBb2sf-KoHegcAHVd2cn2M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/predictions?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"predictions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobierz predykcje danego usera",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQzNTc0NzQsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjlmODYwNjItMjVjZi00OWFmLTg3ZjItNWZkOTVmMjk3YzdiIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.ylBf8x6k0WtNZKKsOnN6U96AZv221oM7xfLeToyFkE8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/predictions/21?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"predictions",
+								"21"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wykonaj predykcje",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQzNTc0NzQsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjlmODYwNjItMjVjZi00OWFmLTg3ZjItNWZkOTVmMjk3YzdiIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.ylBf8x6k0WtNZKKsOnN6U96AZv221oM7xfLeToyFkE8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"matchId\": 1,\n\t\"resultH\": -1,\n\t\"resultA\": -1,\n\t\"konckoutStage\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/predictions/make",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"predictions",
+								"make"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wykonaj wiele predykcji",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzQzNTc0NzQsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNjlmODYwNjItMjVjZi00OWFmLTg3ZjItNWZkOTVmMjk3YzdiIiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.ylBf8x6k0WtNZKKsOnN6U96AZv221oM7xfLeToyFkE8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t\t{\n\t\t\t\"matchId\": 1,\n\t\t\t\"resultH\": 20,\n\t\t\t\"resultA\": 20,\n\t\t\t\"konckoutStage\": false\n\t\t},\n\t\t{\n\t\t\t\"matchId\": 1,\n\t\t\t\"resultH\": 22,\n\t\t\t\"resultA\": 22,\n\t\t\t\"konckoutStage\": true,\n\t\t\t\"teamHId\": 1,\n\t\t\t\"teamAId\": 2\n\t\t}\n]"
+						},
+						"url": {
+							"raw": "http://localhost:8080/predictions/make/many",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"predictions",
+								"make",
+								"many"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deadline",
+			"item": [
+				{
+					"name": "pobierz deadline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/deadline",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deadline"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "points",
+			"item": [
+				{
+					"name": "punkty current user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/points?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"points"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "punkty specified user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/points/1?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"points",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "punkty league, current match",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/points/current/1?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"points",
+								"current",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "punkty league, specified match",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzUwNTgxNjIsInVzZXJfbmFtZSI6Im1iIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNmI1YjM4MjYtOGE2Ni00MTViLWIxNDgtMWZiOTc4YmI5NmM5IiwiY2xpZW50X2lkIjoiWlRJIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.cPgsKyDtZHSgTYSjS4oRPqFotO2CFkpWPebpxcb-nXg"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/points/1/1?page=0&size=60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"points",
+								"1",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
